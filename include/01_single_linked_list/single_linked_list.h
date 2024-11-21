@@ -23,7 +23,18 @@ typedef struct LinkedList {
 
 // 함수 원형 선언
 LinkedList *createLinkedList();
-bool isEmptyLinkedList(LinkedList *list);
-void destroyLinkedList(LinkedList *list);
+Node* node_create(DataType data);
+// void node_delete(Node *node);
+int list_insert_head(LinkedList *list, DataType data);
+int list_insert_tail(LinkedList *list, DataType data);
+int list_remove_head(LinkedList *list);
+int list_remove_tail(LinkedList *list);
+int list_insert_position(Node* node, DataType data);
+int list_remove_target_node(LinkedList *list, Node* target);
+int list_destroy(LinkedList *list);
+int list_search(const LinkedList *list, DataType data);
+void list_print(const LinkedList *list);
+void list_info_print(const LinkedList *list);
 
-#endif // ifndef 조건문의 끝을 나타냄
+
+#endif
